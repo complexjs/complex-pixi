@@ -1,0 +1,32 @@
+{
+  "name": "complex-pixi",
+  "version": "1.0.0",
+  "description": "PixiJS implementation for ComplexJS",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faebeee/complex-pixi.git"
+  },
+  "keywords": [
+    "ComplexJS",
+    "Game",
+    "HTML5",
+    "WebGL",
+    "Canvas",
+    "Dev",
+    "Gui",
+    "UI",
+    "graphics",
+    "engine",
+    "complex"
+  ],
+  "devDependencies": {
+    "gulp": ">= x",
+    "gulp-concat": ">= x"
+  },
+  "author": "Faebeee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/faebeee/complex-pixi/issues"
+  },
+  "homepage": "https://github.com/faebeee/complex-pixi#readme"
+}
