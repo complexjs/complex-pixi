@@ -1,3 +1,8 @@
+'use strict';
+
+var cxComponent = require('complex-engine-component');
+var PIXI = require('pixi');
+
 class PixiSpriteComponent extends cxComponent
 {
     constructor( texture, size, position ){
@@ -20,3 +25,5 @@ class PixiSpriteComponent extends cxComponent
         this.sprite.scale.y = size.y;
     }
 }
+
+module.exports = PixiSpriteComponent;

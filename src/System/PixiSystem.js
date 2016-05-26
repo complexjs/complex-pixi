@@ -1,3 +1,8 @@
+'use strict';
+
+var cxVoidSystem = require('complex-engine-system').cxVoidSystem;
+var PIXI = require('pixi');
+
 class PixiSystem extends cxVoidSystem
 {
     constructor(container, width, height)
@@ -37,3 +42,5 @@ class PixiSystem extends cxVoidSystem
          this.renderer.render(this.stage);
     }
 }
+
+module.exports = PixiSystem;
