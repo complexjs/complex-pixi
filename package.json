@@ -1,6 +1,6 @@
 {
   "name": "complex-pixi",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "PixiJS implementation for ComplexJS",
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
     "complex"
   ],
   "dependencies": {
-    "pixi.js": "^0.3.0"
+    "pixi.js": "^3.0.0"
   },
   "author": "Faebeee",
   "license": "ISC",
