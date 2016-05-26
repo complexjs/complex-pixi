@@ -1,7 +1,7 @@
 'use strict';
 
 var cxVoidSystem = require('complex-engine-system').cxVoidSystem;
-var PIXI = require('pixi');
+var PIXI = require('pixi.js');
 
 class PixiSystem extends cxVoidSystem
 {

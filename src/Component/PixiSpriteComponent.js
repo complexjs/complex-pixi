@@ -1,7 +1,7 @@
 'use strict';
 
 var cxComponent = require('complex-engine-component');
-var PIXI = require('pixi');
+var PIXI = require('pixi.js');
 
 class PixiSpriteComponent extends cxComponent
 {
