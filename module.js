@@ -1,6 +1,6 @@
 'use strict';
 
 module.exports = {
-    PixiSpriteComponent: require('./src/Component/PixiSpriteComponent'),
-    PixiSystem: require('./src/System/PixiSystem'),
+    cxPixiSpriteComponent: require('./src/Component/cxPixiSpriteComponent'),
+    cxPixiSystem: require('./src/System/cxPixiSystem'),
 };
