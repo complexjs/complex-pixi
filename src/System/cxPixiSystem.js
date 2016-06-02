@@ -33,7 +33,8 @@ class cxPixiSystem extends cxVoidSystem
      * @param  {cxEntity} cxEntity Entity
      */
     added(cxEntity) {
-        if(comp = cxEntity.getComponent('cx.pixi.component.sprite') !== null){
+        let comp = cxEntity.getComponent('cx.pixi.component.sprite');
+        if(comp !== null){
             this.stage.addChild(comp.sprite);
         }
     }
@@ -43,7 +44,8 @@ class cxPixiSystem extends cxVoidSystem
      * @param  {cxEntity} cxEntity Entity
      */
     removed(cxEntity) {
-        if(comp = cxEntity.getComponent('cx.pixi.component.sprite') !== null){
+        let comp = cxEntity.getComponent('cx.pixi.component.sprite');
+        if(comp !== null){
             this.stage.removeChild(comp.sprite);
         }
     }
