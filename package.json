@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/complexjs/complex-pixi.git"
   },
-  "main" : "Pixi.js",
+  "main": "module.js",
   "keywords": [
     "ComplexJS",
     "Game",
@@ -21,6 +21,8 @@
     "complex"
   ],
   "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jsdoc3": "^0.3.0",
     "pixi.js": "^3.0.0"
   },
   "author": "Faebeee",

@@ -3,8 +3,15 @@
 var cxVoidSystem = require('complex-engine-system').cxVoidSystem;
 var PIXI = require('pixi.js');
 
-class PixiSystem extends cxVoidSystem
+class cxPixiSystem extends cxVoidSystem
 {
+    /**
+     * Constructor
+     * @param  {DOMElement} container Container element
+     * @param  {int} width     width
+     * @param  {int} height    height
+     * @param  {hex} color     background color
+     */
     constructor(container, width, height, color)
     {
         super();
@@ -22,34 +29,27 @@ class PixiSystem extends cxVoidSystem
     }
 
     /**
-     * [added description]
-     * @param  {[type]} cxEntity [description]
-     * @return {[type]}          [description]
+     *Added a new entity
+     * @param  {cxEntity} cxEntity Entity
      */
-    added(cxEntity)
-    {
-        if(cxEntity.hasComponent('cx.pixi.component.sprite')){
-            let comp = cxEntity.getComponent('cx.pixi.component.sprite');
+    added(cxEntity) {
+        if(comp = cxEntity.getComponent('cx.pixi.component.sprite') !== null){
             this.stage.addChild(comp.sprite);
         }
     }
 
     /**
-     * [removed description]
-     * @param  {[type]} cxEntity [description]
-     * @return {[type]}          [description]
+     * Removed an entity
+     * @param  {cxEntity} cxEntity Entity
      */
-    removed(cxEntity)
-    {
-        if(cxEntity.hasComponent('cx.pixi.component.sprite')){
-            let comp = cxEntity.getComponent('cx.pixi.component.sprite');
+    removed(cxEntity) {
+        if(comp = cxEntity.getComponent('cx.pixi.component.sprite') !== null){
             this.stage.removeChild(comp.sprite);
         }
     }
 
     /**
-     * [update description]
-     * @return {[type]} [description]
+     * Update cycle
      */
     update ()
     {
@@ -57,4 +57,4 @@ class PixiSystem extends cxVoidSystem
     }
 }
 
-module.exports = PixiSystem;
+module.exports = cxPixiSystem;

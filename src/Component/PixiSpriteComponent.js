@@ -3,8 +3,14 @@
 var cxComponent = require('complex-engine-component');
 var PIXI = require('pixi.js');
 
-class PixiSpriteComponent extends cxComponent
+class cxPixiSpriteComponent extends cxComponent
 {
+    /**
+     * cxPixiSpriteComponent constructor
+     * @param  {PIXI.Texture} texture  the sprites texture
+     * @param  {Object} size     size Object {x:1, y:1}
+     * @param  {Object} position position Object {x:10, y:10}
+     */
     constructor( texture, size, position ){
         super();
         this.tag = 'cx.pixi.component.sprite';
@@ -26,4 +32,4 @@ class PixiSpriteComponent extends cxComponent
     }
 }
 
-module.exports = PixiSpriteComponent;
+module.exports = cxPixiSpriteComponent;
