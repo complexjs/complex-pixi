@@ -27,8 +27,8 @@ class cxPixiSpriteComponent extends cxComponent
         this.sprite.position.x = position.x;
         this.sprite.position.y = position.y;
 
-        this.sprite.scale.x = size.x;
-        this.sprite.scale.y = size.y;
+        this.sprite.width = size.x;
+        this.sprite.height = size.y;
     }
 }
 
