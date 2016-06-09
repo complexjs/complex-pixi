@@ -37,6 +37,11 @@ class cxPixiSystem extends cxVoidSystem
         if(comp !== null){
             this.stage.addChild(comp.sprite);
         }
+
+        comp = cxEntity.getComponent('cx.pixi.component');
+        if(comp !== null){
+            this.stage.addChild(comp.object);
+        }
     }
 
     /**
@@ -47,6 +52,11 @@ class cxPixiSystem extends cxVoidSystem
         let comp = cxEntity.getComponent('cx.pixi.component.sprite');
         if(comp !== null){
             this.stage.removeChild(comp.sprite);
+        }
+
+        comp = cxEntity.getComponent('cx.pixi.component');
+        if(comp !== null){
+            this.stage.removeChild(comp.object);
         }
     }
 

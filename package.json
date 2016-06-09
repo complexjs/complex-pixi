@@ -1,6 +1,6 @@
 {
   "name": "complex-pixi",
-  "version": "2.1.4",
+  "version": "2.1.7",
   "description": "PixiJS implementation for ComplexJS",
   "repository": {
     "type": "git",
