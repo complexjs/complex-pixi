@@ -1,9 +1,9 @@
 'use strict';
 
-var cxVoidSystem = require('complex-engine-system').cxVoidSystem;
-var PIXI = require('pixi.js');
+import {cxVoidSystem} from 'complex-engine-system';
+import PIXI from 'pixi.js'
 
-class cxPixiSystem extends cxVoidSystem
+export default class cxPixiSystem extends cxVoidSystem
 {
     /**
      * Constructor
@@ -68,5 +68,3 @@ class cxPixiSystem extends cxVoidSystem
          this.renderer.render(this.stage);
     }
 }
-
-module.exports = cxPixiSystem;

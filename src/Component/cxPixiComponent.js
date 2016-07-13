@@ -1,9 +1,9 @@
 'use strict';
 
-var cxComponent = require('complex-engine-component');
-var PIXI = require('pixi.js');
+import cxComponent from 'complex-engine-component';
+import PIXI from 'pixi.js';
 
-class cxPixiComponent extends cxComponent
+export default class cxPixiComponent extends cxComponent
 {
     /**
      * cxPixiComponent constructor
@@ -18,5 +18,3 @@ class cxPixiComponent extends cxComponent
         this.object = pixiElement;
     }
 }
-
-module.exports = cxPixiComponent;

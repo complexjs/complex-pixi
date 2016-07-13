@@ -1,18 +1,25 @@
 'use strict';
 
-let cxJsonParser = require('complex-json-loader').cxJsonParser;
-let cxPixiSpriteComponent = require('complex-pixi').cxPixiSpriteComponent;
-let PIXI = require('pixi.js');
+import {cxJsonParser} from 'complex-json-loader';
+import {cxPixiSpriteComponent} from 'complex-pixi';
+import PIXI from 'pixi.js';
 
-module.exports = class cxPixiSpriteComponentParser extends cxJsonParser {
+export default class cxPixiSpriteComponentParser extends cxJsonParser {
     constructor(){
         super();
     }
 
+    /**
+     * Check if object is supported to be parsed
+     */
     supports( obj ){
         return ( obj.type === 'cx.pixi.component.sprite');
     }
 
+    /**
+     * Deserialize object
+     * @return cxPixiSpriteComponent
+     */
     parse( json ){
         let data = json.data;
         let tex = PIXI.Texture.fromImage(data.texture);

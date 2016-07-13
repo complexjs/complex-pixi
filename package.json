@@ -1,6 +1,6 @@
 {
   "name": "complex-pixi",
-  "version": "2.1.7",
+  "version": "3.0.0",
   "description": "PixiJS implementation for ComplexJS",
   "repository": {
     "type": "git",
@@ -21,9 +21,8 @@
     "complex"
   ],
   "dependencies": {
+    "complex-engine-component": "^1.0.0",
     "complex-json-loader": "^0.1.0",
-    "gulp": "^3.9.1",
-    "gulp-jsdoc3": "^0.3.0",
     "pixi.js": "^3.0.0"
   },
   "scripts": {
