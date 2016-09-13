@@ -1,10 +1,10 @@
 'use strict';
 
-import {cxJsonParser} from 'complex-json-loader';
-import {cxPixiSpriteComponent} from 'complex-pixi';
-import PIXI from 'pixi.js';
+let cxJsonParser = require('complex-json-loader').cxJsonParser;
+let cxPixiSpriteComponent = require('../Component/cxPixiSpriteComponent.js');
+let PIXI = require('pixi.js');
 
-export default class cxPixiSpriteComponentParser extends cxJsonParser {
+module.exports = class cxPixiSpriteComponentParser extends cxJsonParser {
     constructor(){
         super();
     }

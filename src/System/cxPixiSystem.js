@@ -1,9 +1,9 @@
 'use strict';
 
-import {cxVoidSystem} from 'complex-engine-system';
-import PIXI from 'pixi.js'
+let cxVoidSystem = require('complex-engine').cxVoidSystem;
+let PIXI = require('pixi.js');
 
-export default class cxPixiSystem extends cxVoidSystem
+module.exports = class cxPixiSystem extends cxVoidSystem
 {
     /**
      * Constructor

@@ -1,9 +1,9 @@
 'use strict';
 
-import cxComponent from 'complex-engine-component';
-import PIXI from 'pixi.js';
+let cxComponent = require('complex-engine').cxComponent;
+let PIXI = require('pixi.js');
 
-export default class cxPixiSpriteComponent extends cxComponent
+module.exports = class cxPixiSpriteComponent extends cxComponent
 {
     /**
      * cxPixiSpriteComponent constructor
