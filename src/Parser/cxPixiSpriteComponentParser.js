@@ -1,7 +1,6 @@
 'use strict';
 
 let cxJsonParser = require('complex-json-loader').cxJsonParser;
-let cxPixiSpriteComponent = require('../Component/cxPixiSpriteComponent.js');
 let PIXI = require('pixi.js');
 
 module.exports = class cxPixiSpriteComponentParser extends cxJsonParser {
@@ -21,9 +20,9 @@ module.exports = class cxPixiSpriteComponentParser extends cxJsonParser {
      * @return cxPixiSpriteComponent
      */
     parse( json ){
-        let data = json.data;
-        let tex = PIXI.Texture.fromImage(data.texture);
-        let component = new cxPixiSpriteComponent(tex, data.size, data.position);
-        return component;
+       // let data = json.data;
+       // let tex = PIXI.Texture.fromImage(data.texture);
+       // let component = new cxPixiSpriteComponent(tex, data.size, data.position);
+       // return component;
     }
 };

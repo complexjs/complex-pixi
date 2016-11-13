@@ -33,12 +33,7 @@ module.exports = class cxPixiSystem extends cxVoidSystem
      * @param  {cxEntity} cxEntity Entity
      */
     added(cxEntity) {
-        let comps = cxEntity.getComponents('cx.pixi.component.sprite');
-        for (let i = 0; i < comps.length; i++){
-            this.stage.addChild(comps[i].sprite);
-        }
-
-        comp = cxEntity.getComponent('cx.pixi.component');
+        let comps = cxEntity.getComponents('cx.pixi.component');
         for (let i = 0; i < comps.length; i++){
             this.stage.addChild(comps[i].object);
         }
@@ -49,12 +44,7 @@ module.exports = class cxPixiSystem extends cxVoidSystem
      * @param  {cxEntity} cxEntity Entity
      */
     removed(cxEntity) {
-        let comps = cxEntity.getComponent('cx.pixi.component.sprite');
-        for (let i = 0; i < comps.length; i++){
-            this.stage.removeChild(comps[i].sprite);
-        }
-
-        comps = cxEntity.getComponent('cx.pixi.component');
+        let comps = cxEntity.getComponent('cx.pixi.component');
         for (let i = 0; i < comps.length; i++){
             this.stage.removeChild(comps[i].object);
         }
