@@ -33,14 +33,14 @@ module.exports = class cxPixiSystem extends cxVoidSystem
      * @param  {cxEntity} cxEntity Entity
      */
     added(cxEntity) {
-        let comp = cxEntity.getComponent('cx.pixi.component.sprite');
-        if(comp !== null){
-            this.stage.addChild(comp.sprite);
+        let comps = cxEntity.getComponents('cx.pixi.component.sprite');
+        for (let i = 0; i < comps.length; i++){
+            this.stage.addChild(comps[i].sprite);
         }
 
         comp = cxEntity.getComponent('cx.pixi.component');
-        if(comp !== null){
-            this.stage.addChild(comp.object);
+        for (let i = 0; i < comps.length; i++){
+            this.stage.addChild(comps[i].object);
         }
     }
 
@@ -49,14 +49,14 @@ module.exports = class cxPixiSystem extends cxVoidSystem
      * @param  {cxEntity} cxEntity Entity
      */
     removed(cxEntity) {
-        let comp = cxEntity.getComponent('cx.pixi.component.sprite');
-        if(comp !== null){
-            this.stage.removeChild(comp.sprite);
+        let comps = cxEntity.getComponent('cx.pixi.component.sprite');
+        for (let i = 0; i < comps.length; i++){
+            this.stage.removeChild(comps[i].sprite);
         }
 
-        comp = cxEntity.getComponent('cx.pixi.component');
-        if(comp !== null){
-            this.stage.removeChild(comp.object);
+        comps = cxEntity.getComponent('cx.pixi.component');
+        for (let i = 0; i < comps.length; i++){
+            this.stage.removeChild(comps[i].object);
         }
     }
 
