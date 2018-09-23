@@ -1,37 +1,44 @@
 {
-  "name": "complex-pixi",
-  "version": "6.0.4",
-  "description": "PixiJS implementation for ComplexJS",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/complexjs/complex-pixi.git"
-  },
-  "main": "module.js",
-  "keywords": [
-    "ComplexJS",
-    "Game",
-    "HTML5",
-    "WebGL",
-    "Canvas",
-    "Dev",
-    "Gui",
-    "UI",
-    "graphics",
-    "engine",
-    "complex"
-  ],
-  "dependencies": {
-    "complex-engine" : "^4.0.0",
-    "complex-json-loader": "^0.3.0",
-    "pixi.js": "^4.0.0"
-  },
-  "scripts": {
-    "doc": "gulp doc"
-  },
-  "author": "Faebeee",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/complexjs/complex-pixi/issues"
-  },
-  "homepage": "https://github.com/complexjs/complex-pixi#readme"
+    "name": "complex-pixi",
+    "version": "6.0.4",
+    "description": "PixiJS implementation for ComplexJS",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/complexjs/complex-pixi.git"
+    },
+    "main": "./build/index.js",
+    "keywords": [
+        "ComplexJS",
+        "Game",
+        "HTML5",
+        "WebGL",
+        "Canvas",
+        "Dev",
+        "Gui",
+        "UI",
+        "graphics",
+        "engine",
+        "complex"
+    ],
+    "dependencies": {
+        "complex-engine": "^6.0.2",
+        "pixi.js": "^4.8.1"
+    },
+    "scripts": {
+        "bundle": "npx tsc-bundle --project ./tsconfig.json --importAs complex-engine=cx,pixi.js=pixi.js --exportAs cxPixi --target es5"
+    },
+    "author": "Faebeee",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/complexjs/complex-pixi/issues"
+    },
+    "homepage": "https://github.com/complexjs/complex-pixi#readme",
+    "devDependencies": {
+        "@types/pixi.js": "^4.8.1",
+        "ts-loader": "^4.4.2",
+        "typescript": "^3.0.3",
+        "typescript-bundle": "^0.8.9",
+        "webpack": "^4.8.3",
+        "webpack-cli": "^3.1.0"
+    }
 }
