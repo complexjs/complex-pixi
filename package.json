@@ -7,6 +7,7 @@
         "url": "git+https://github.com/complexjs/complex-pixi.git"
     },
     "main": "./build/index.js",
+    "types": "./build/index.d.ts",
     "keywords": [
         "ComplexJS",
         "Game",
@@ -22,7 +23,7 @@
     ],
     "dependencies": {
         "complex-engine": "^6.0.2",
-        "pixi.js": "^4.8.1"
+        "pixi.js": "^4.8.2"
     },
     "scripts": {
         "bundle": "npx tsc-bundle --project ./tsconfig.json --importAs complex-engine=cx,pixi.js=pixi.js --exportAs cxPixi --target es5"
@@ -35,10 +36,10 @@
     "homepage": "https://github.com/complexjs/complex-pixi#readme",
     "devDependencies": {
         "@types/pixi.js": "^4.8.1",
-        "ts-loader": "^4.4.2",
+        "ts-loader": "^4.5.0",
         "typescript": "^3.0.3",
         "typescript-bundle": "^0.8.9",
-        "webpack": "^4.8.3",
-        "webpack-cli": "^3.1.0"
+        "webpack": "^4.20.1",
+        "webpack-cli": "^3.1.1"
     }
 }

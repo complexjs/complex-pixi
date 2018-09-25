@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -11,21 +12,19 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-define(["require", "exports", "complex-engine"], function (require, exports, complex_engine_1) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    var PixiComponent = /** @class */ (function (_super) {
-        __extends(PixiComponent, _super);
-        function PixiComponent(pixiElement) {
-            var _this = _super.call(this) || this;
-            _this.object = pixiElement;
-            return _this;
-        }
-        PixiComponent.prototype.getObject = function () {
-            return this.object;
-        };
-        return PixiComponent;
-    }(complex_engine_1.Component));
-    exports.default = PixiComponent;
-});
+Object.defineProperty(exports, "__esModule", { value: true });
+var complex_engine_1 = require("complex-engine");
+var PixiComponent = /** @class */ (function (_super) {
+    __extends(PixiComponent, _super);
+    function PixiComponent(pixiElement) {
+        var _this = _super.call(this) || this;
+        _this.object = pixiElement;
+        return _this;
+    }
+    PixiComponent.prototype.getObject = function () {
+        return this.object;
+    };
+    return PixiComponent;
+}(complex_engine_1.Component));
+exports.default = PixiComponent;
 //# sourceMappingURL=PixiComponent.js.map

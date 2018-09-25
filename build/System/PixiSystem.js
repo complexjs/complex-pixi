@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -14,33 +15,32 @@ var __extends = (this && this.__extends) || (function () {
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-define(["require", "exports", "complex-engine", "pixi.js", "../Component/PixiComponent"], function (require, exports, complex_engine_1, pixi_js_1, PixiComponent_1) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    PixiComponent_1 = __importDefault(PixiComponent_1);
-    var PixiSystem = /** @class */ (function (_super) {
-        __extends(PixiSystem, _super);
-        function PixiSystem(container, width, height, color) {
-            var _this = _super.call(this) || this;
-            _this.app = new pixi_js_1.Application(width, height, { backgroundColor: color });
-            container.appendChild(_this.app.view);
-            return _this;
+Object.defineProperty(exports, "__esModule", { value: true });
+var complex_engine_1 = require("complex-engine");
+var pixi_js_1 = require("pixi.js");
+var PixiComponent_1 = __importDefault(require("../Component/PixiComponent"));
+var PixiSystem = /** @class */ (function (_super) {
+    __extends(PixiSystem, _super);
+    function PixiSystem(container, width, height, color) {
+        var _this = _super.call(this) || this;
+        _this.app = new pixi_js_1.Application(width, height, { backgroundColor: color });
+        container.appendChild(_this.app.view);
+        return _this;
+    }
+    PixiSystem.prototype.added = function (entity) {
+        var comps = entity.getComponents(PixiComponent_1.default);
+        for (var i = 0; i < comps.length; i++) {
+            this.app.stage.addChild(comps[i].getObject());
         }
-        PixiSystem.prototype.added = function (entity) {
-            var comps = entity.getComponents(PixiComponent_1.default);
-            for (var i = 0; i < comps.length; i++) {
-                this.app.stage.addChild(comps[i].getObject());
-            }
-        };
-        PixiSystem.prototype.removed = function (entity) {
-            var comps = entity.getComponents(PixiComponent_1.default);
-            for (var i = 0; i < comps.length; i++) {
-                this.app.stage.removeChild(comps[i].getObject());
-            }
-        };
-        PixiSystem.prototype.update = function () { };
-        return PixiSystem;
-    }(complex_engine_1.VoidSystem));
-    exports.default = PixiSystem;
-});
+    };
+    PixiSystem.prototype.removed = function (entity) {
+        var comps = entity.getComponents(PixiComponent_1.default);
+        for (var i = 0; i < comps.length; i++) {
+            this.app.stage.removeChild(comps[i].getObject());
+        }
+    };
+    PixiSystem.prototype.update = function () { };
+    return PixiSystem;
+}(complex_engine_1.VoidSystem));
+exports.default = PixiSystem;
 //# sourceMappingURL=PixiSystem.js.map

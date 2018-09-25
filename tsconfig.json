@@ -4,7 +4,7 @@
 		/* Basic Options */
 		"target": "es5",
 		/* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'. */
-		"module": "amd",
+		"module": "commonjs",
 		/* Specify module code generation: 'none', 'commonjs', 'amd', 'System', 'umd', 'es2015', or 'ESNext'. */
 		"lib": [
 			"es6",
@@ -19,9 +19,9 @@
 		// "declarationMap": true,                /* Generates a sourcemap for each corresponding '.d.ts' file. */
 		"sourceMap": true,
 		/* Generates corresponding '.map' file. */
-		"outFile": "./build/bundle.js",
+		//"outFile": "./build/bundle.js",
 		/* Concatenate and emit output to single file. */
-		//"outDir": "./build",
+		"outDir": "./build",
 		/* Redirect output structure to the directory. */
 		"rootDir": "./src",
 		/* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
@@ -69,6 +69,6 @@
 		// "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
 	},
 	"files": [
-		"./src/example/index.ts",
+		"./src/index.ts",
 	]
 }
