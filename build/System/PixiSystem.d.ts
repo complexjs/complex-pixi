@@ -1,4 +1,4 @@
-import { VoidSystem, Entity } from "complex-engine";
+import { Entity, VoidSystem } from "complex-engine";
 import { Application } from "pixi.js";
 export default class PixiSystem extends VoidSystem {
     app: Application;

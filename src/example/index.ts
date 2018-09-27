@@ -9,8 +9,8 @@ complex.loadScene(new MyScene());
 
 // and start to render it
 function render() {
-  complex.update();
-  requestAnimationFrame(render);
+	complex.update();
+	requestAnimationFrame(render);
 }
 
 requestAnimationFrame(render);

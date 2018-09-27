@@ -19,6 +19,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var complex_engine_1 = require("complex-engine");
 var pixi_js_1 = require("pixi.js");
 var PixiComponent_1 = __importDefault(require("../Component/PixiComponent"));
+var AnimationGroupComponent_1 = __importDefault(require("../Component/AnimationGroupComponent"));
 var PixiSystem = /** @class */ (function (_super) {
     __extends(PixiSystem, _super);
     function PixiSystem(container, width, height, color) {
@@ -28,9 +29,13 @@ var PixiSystem = /** @class */ (function (_super) {
         return _this;
     }
     PixiSystem.prototype.added = function (entity) {
-        var comps = entity.getComponents(PixiComponent_1.default);
-        for (var i = 0; i < comps.length; i++) {
-            this.app.stage.addChild(comps[i].getObject());
+        var pixiComponents = entity.getComponents(PixiComponent_1.default);
+        for (var i = 0; i < pixiComponents.length; i++) {
+            this.app.stage.addChild(pixiComponents[i].getObject());
+        }
+        var animationComponents = entity.getComponents(AnimationGroupComponent_1.default);
+        for (var i = 0; i < animationComponents.length; i++) {
+            this.app.stage.addChild(animationComponents[i].getAnimation());
         }
     };
     PixiSystem.prototype.removed = function (entity) {
@@ -38,8 +43,13 @@ var PixiSystem = /** @class */ (function (_super) {
         for (var i = 0; i < comps.length; i++) {
             this.app.stage.removeChild(comps[i].getObject());
         }
+        var animationComponents = entity.getComponents(AnimationGroupComponent_1.default);
+        for (var i = 0; i < animationComponents.length; i++) {
+            this.app.stage.removeChild(animationComponents[i].getAnimation());
+        }
     };
-    PixiSystem.prototype.update = function () { };
+    PixiSystem.prototype.update = function () {
+    };
     return PixiSystem;
 }(complex_engine_1.VoidSystem));
 exports.default = PixiSystem;
