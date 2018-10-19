@@ -1,0 +1,1 @@
+{"version":3,"file":"PixiComponent.d.ts","sourceRoot":"","sources":["../../src/Component/PixiComponent.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,MAAM,gBAAgB,CAAC;AAC3C,OAAO,EAAE,aAAa,EAAE,MAAM,SAAS,CAAC;AAExC,MAAM,CAAC,OAAO,OAAO,aAAc,SAAQ,SAAS;IAChD,SAAS,CAAC,MAAM,EAAE,aAAa,CAAC;gBAEpB,WAAW,EAAE,aAAa;IAKtC,SAAS;CAGZ"}

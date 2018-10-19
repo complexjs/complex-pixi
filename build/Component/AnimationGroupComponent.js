@@ -16,17 +16,20 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var complex_engine_1 = require("complex-engine");
 var AnimationGroupComponent = /** @class */ (function (_super) {
     __extends(AnimationGroupComponent, _super);
-    function AnimationGroupComponent(currentAnimation, initialAnimation, animations) {
+    function AnimationGroupComponent(initialAnimation, animations) {
         var _this = _super.call(this) || this;
         _this.animations = animations;
         _this.animation = initialAnimation;
-        _this.currentAnimation = currentAnimation;
+        _this.currentAnimation = '';
         return _this;
     }
     AnimationGroupComponent.prototype.playAnimation = function (name) {
-        this.currentAnimation = name;
-        this.animation.textures = this.animations[name];
-        this.animation.gotoAndPlay(0);
+        if (this.currentAnimation !== name) {
+            this.currentAnimation = name;
+            this.animation.textures = this.animations[name].frames;
+            this.animation.animationSpeed = this.animations[name].animationSpeed;
+            this.animation.gotoAndPlay(0);
+        }
     };
     AnimationGroupComponent.prototype.getAnimation = function () {
         return this.animation;

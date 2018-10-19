@@ -5,7 +5,8 @@ export default class AnimationGroupComponent extends Component {
     private animations;
     private currentAnimation;
     private animation;
-    constructor(currentAnimation: string, initialAnimation: extras.AnimatedSprite, animations: NamedAnimations);
+    constructor(initialAnimation: extras.AnimatedSprite, animations: NamedAnimations);
     playAnimation(name: string): void;
     getAnimation(): extras.AnimatedSprite;
 }
+//# sourceMappingURL=AnimationGroupComponent.d.ts.map

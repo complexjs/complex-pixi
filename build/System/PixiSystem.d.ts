@@ -7,3 +7,4 @@ export default class PixiSystem extends VoidSystem {
     removed(entity: Entity): void;
     update(): void;
 }
+//# sourceMappingURL=PixiSystem.d.ts.map

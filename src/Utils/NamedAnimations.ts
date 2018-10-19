@@ -1,5 +1,10 @@
-import {Texture} from 'pixi.js';
+import { Texture, extras } from 'pixi.js';
 
 export default interface NamedAnimations {
-    [key: string]: Texture[];
+    [key: string]: AnimationSettings;
+}
+
+export interface AnimationSettings {
+    animationSpeed: number;
+    frames: Texture[];
 }

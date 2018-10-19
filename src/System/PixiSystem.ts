@@ -1,5 +1,5 @@
-import {Entity, VoidSystem} from "complex-engine";
-import {Application} from "pixi.js";
+import { Entity, VoidSystem } from "complex-engine";
+import { Application } from "pixi.js";
 import PixiComponent from "../Component/PixiComponent";
 import AnimationGroupComponent from '../Component/AnimationGroupComponent';
 
@@ -13,7 +13,7 @@ export default class PixiSystem extends VoidSystem {
         color: number
     ) {
         super();
-        this.app = new Application(width, height, {backgroundColor: color});
+        this.app = new Application(width, height, { backgroundColor: color });
         container.appendChild(this.app.view);
     }
 

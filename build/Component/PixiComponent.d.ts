@@ -5,3 +5,4 @@ export default class PixiComponent extends Component {
     constructor(pixiElement: DisplayObject);
     getObject(): DisplayObject;
 }
+//# sourceMappingURL=PixiComponent.d.ts.map

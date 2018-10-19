@@ -1,0 +1,1 @@
+{"version":3,"file":"NamedAnimations.d.ts","sourceRoot":"","sources":["../../src/Utils/NamedAnimations.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAU,MAAM,SAAS,CAAC;AAE1C,MAAM,CAAC,OAAO,WAAW,eAAe;IACpC,CAAC,GAAG,EAAE,MAAM,GAAG,iBAAiB,CAAC;CACpC;AAED,MAAM,WAAW,iBAAiB;IAC9B,cAAc,EAAE,MAAM,CAAC;IACvB,MAAM,EAAE,OAAO,EAAE,CAAC;CACrB"}

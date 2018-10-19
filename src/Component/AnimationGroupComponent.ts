@@ -1,5 +1,5 @@
-import {Component} from "complex-engine";
-import {extras} from "pixi.js";
+import { Component } from "complex-engine";
+import { extras } from "pixi.js";
 import NamedAnimations from '../Utils/NamedAnimations';
 
 export default class AnimationGroupComponent extends Component {
@@ -7,22 +7,25 @@ export default class AnimationGroupComponent extends Component {
     private currentAnimation: string;
     private animation: extras.AnimatedSprite;
 
-    constructor(currentAnimation: string, initialAnimation: extras.AnimatedSprite, animations: NamedAnimations) {
+    constructor(initialAnimation: extras.AnimatedSprite, animations: NamedAnimations) {
         super();
         this.animations = animations;
         this.animation = initialAnimation;
-        this.currentAnimation = currentAnimation;
+        this.currentAnimation = '';
     }
 
-    public playAnimation(name: string): void{
-        this.currentAnimation = name;
+    public playAnimation(name: string): void {
 
-		this.animation.textures = this.animations[name];
-		this.animation.gotoAndPlay(0);
+        if (this.currentAnimation !== name) {
+            this.currentAnimation = name;
+
+            this.animation.textures = this.animations[name].frames;
+            this.animation.animationSpeed = this.animations[name].animationSpeed;
+            this.animation.gotoAndPlay(0);
+        }
     }
 
     public getAnimation() {
         return this.animation;
     }
-
 }
